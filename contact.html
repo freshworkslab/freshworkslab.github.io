@@ -51,53 +51,7 @@
             background-color: #0da8d9;
         }
     </style>
-    <!-- Freshsales Tracking Code -->
-    <script src='//in.fw-cdn.com/31677810/851659.js'></script>
-    <script>
-        // Initialize Freshsales
-        window.fwcrm = window.fwcrm || {};
-        fwcrm.trackEvent = function(eventName, eventData) {
-            console.log('Tracking event:', eventName, eventData);
-            // In a real scenario, this would call the actual Freshsales tracking method
-        };
-        fwcrm.identify = function(identifier, userData) {
-            console.log('Identifying user:', identifier, userData);
-            // In a real scenario, this would call the actual Freshsales identify method
-        };
-      
-        
-        
-        // Make sure this code is placed after your CRM tracking code has been initialized
-(function() {
-    // Function to send page visit data
-    function trackPageVisit() {
-        if (typeof window.CRMTracker !== 'undefined' && typeof window.CRMTracker.track === 'function') {
-            window.CRMTracker.track('Page Visited', {
-                pageTitle: document.title,
-                pageUrl: window.location.href,
-                referrer: document.referrer,
-                timestamp: new Date().toISOString()
-            });
-        } else {
-            console.error('CRM Tracker is not available. Check if it\'s properly loaded.');
-        }
-    }
-
-    // Track the initial page load
-    trackPageVisit();
-
-    // For single-page applications, you might want to track route changes
-    // This example uses a basic approach. Adjust as needed for your specific framework
-    var oldPushState = history.pushState;
-    history.pushState = function(state) {
-        oldPushState.apply(this, arguments);
-        trackPageVisit();
-    };
-
-    window.addEventListener('popstate', trackPageVisit);
-})();
-        
-    </script>
+   
 </head>
 
 <body>
