@@ -219,6 +219,42 @@ chat='true'>
   <input type="url" name="website" placeholder="Website" required>
   <button type="submit">Submit</button>
 </form>
+
+            <script>
+                document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Capture form data
+  const formData = new FormData(event.target);
+  const firstName = formData.get('firstName');
+  const lastName = formData.get('lastName');
+  const email = formData.get('email');
+  const alternateContactNumber = formData.get('alternateContactNumber');
+  const companyName = formData.get('companyName');
+  const website = formData.get('website');
+
+  // Map form data to new_contact object
+  var new_contact = {
+    "First name": firstName,
+    "Last name": lastName,
+    "Email": email,
+    "Alternate contact number": alternateContactNumber,
+    "company": {
+      "Name": companyName,
+      "Website": website
+    }
+  };
+  
+  var identifier = email;
+  
+  // Pass the data to Freshsales
+  fwcrm.identify(identifier, new_contact);
+
+  // You can also log or alert to confirm form submission
+  console.log('Contact submitted:', new_contact);
+  alert('Contact submitted successfully!');
+});
+            </script>
         </section>
     </div>
 </body>
