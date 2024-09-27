@@ -210,12 +210,27 @@ chat='true'>
         </section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <input type="submit" value="Send Request">
-            </form>
+           <form action="submit.php" method="POST">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required><br><br>
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="alternateContactNumber">Alternate Contact Number:</label>
+        <input type="text" id="alternateContactNumber" name="alternateContactNumber"><br><br>
+        
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName"><br><br>
+        
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
         </section>
     </div>
 </body>
