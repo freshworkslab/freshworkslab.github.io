@@ -139,7 +139,10 @@
             background-color: #229e71;
         }
     </style>
- 
+    <script
+src='//in.fw-cdn.com/31677810/851659.js'
+chat='true'>
+</script>
     
 </head>
 <body>
@@ -156,8 +159,6 @@
                 </ul>
             </nav>
         </div>
-        <script> function createTempFunction(function_name) { (window.freshsales)[function_name]=function() { (window.freshsales).push([function_name].concat(Array.prototype.slice.call(arguments,0))) }; } (function(url, app_token) { window.assets_url='//d952cmcgwqsjf.cloudfront.net'; window.freshsales = window.freshsales || []; functions_list='init identify trackPageView trackEvent set'.split(' '); for(var i=0; i < functions_list.length; i++) { var function_name = functions_list[i]; createTempFunction(function_name); } var script_tag = document.createElement('script'); script_tag.async=1; script_tag.src= window.assets_url +'/assets/analytics.js'; var first_script_tag = document.getElementsByTagName('script')[0]; first_script_tag.parentNode.insertBefore(script_tag,first_script_tag); freshsales.init(url, app_token); })('fwlabscrm.myfreshworks.com/crm/sales','09f03f2ab515e6a2659ac75c67c74ac2fd223fc2fc3439b404d9d7d253d3e635'); </script>
-
     </header>
     <div class="hero">
         <h1>Freshworks Support Team</h1>
@@ -209,51 +210,12 @@
         </section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
-        <form id="contactForm">
-  <input type="text" name="firstName" placeholder="First Name" required>
-  <input type="text" name="lastName" placeholder="Last Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <input type="text" name="alternateContactNumber" placeholder="Alternate Contact Number" required>
-  <input type="text" name="companyName" placeholder="Company Name" required>
-  <input type="url" name="website" placeholder="Website" required>
-  <button type="submit">Submit</button>
-</form>
-
-            <script>
-                document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
-
-  // Capture form data
-  const formData = new FormData(event.target);
-  const firstName = formData.get('firstName');
-  const lastName = formData.get('lastName');
-  const email = formData.get('email');
-  const alternateContactNumber = formData.get('alternateContactNumber');
-  const companyName = formData.get('companyName');
-  const website = formData.get('website');
-
-  // Map form data to new_contact object
-  var new_contact = {
-    "First name": firstName,
-    "Last name": lastName,
-    "Email": email,
-    "Alternate contact number": alternateContactNumber,
-    "company": {
-      "Name": companyName,
-      "Website": website
-    }
-  };
-  
-  var identifier = email;
-  
-  // Pass the data to Freshsales
-  fwcrm.identify(identifier, new_contact);
-
-  // You can also log or alert to confirm form submission
-  console.log('Contact submitted:', new_contact);
-  alert('Contact submitted successfully!');
-});
-            </script>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send Request">
+            </form>
         </section>
     </div>
 </body>
