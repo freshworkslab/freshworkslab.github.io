@@ -8,8 +8,8 @@
 require (dirname(__FILE__) . '/FreshsalesAnalytics.php');
 
 FreshsalesAnalytics::init(array(
-   'domain' =>  "http://localhost.freshsales-dev.com:3000",
-    'app_token' => "d583fb147e3555a65315e4d1b06f562a"
+   'domain' =>  "https://fwlabscrm.myfreshworks.com/crm/sales",
+    'app_token' => "09f03f2ab515e6a2659ac75c67c74ac2fd223fc2fc3439b404d9d7d253d3e635"
 ));
 FreshsalesAnalytics::identify(array(
     'identifier' => "john@abc.com",
